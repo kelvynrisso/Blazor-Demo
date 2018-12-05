@@ -1,0 +1,21 @@
+﻿@page "/blazor"
+
+
+<h1>Blazor</h1>
+
+<img id="img" src="@imgSrc" />
+
+<button class="btn btn-primary" onclick="@ChangeImage">Click</button>
+
+@functions {
+    string imgSrc = "Images/1.jpg";
+
+    void ChangeImage()
+    {
+        if (imgSrc.Contains("1.jpg")){
+            imgSrc = "Images/2.jpg";
+        }else {
+            imgSrc = "Images/1.jpg";
+        }
+    }
+}
